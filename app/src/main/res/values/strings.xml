@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">pruebabotones</string>
+    <string name="permisos">Permisos</string>
+    <string name="microfono">Microfono</string>
+    <string name="boton_para_entrar_a_la_app">boton para entrar a la app</string>
+    <string name="entrar">entrar</string>
 </resources>

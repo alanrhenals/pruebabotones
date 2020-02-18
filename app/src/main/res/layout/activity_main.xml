@@ -7,20 +7,22 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Entrar"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="36dp"
         android:layout_marginStart="164dp"
         android:layout_marginTop="344dp"
         android:layout_marginEnd="19dp"
-        android:contentDescription="boton para entrar a la app "
+        android:layout_marginBottom="1dp"
+        android:contentDescription="@string/boton_para_entrar_a_la_app"
         android:onClick="entrar"
-        android:text="entrar"
+        android:text="@string/entrar"
         android:textAllCaps="true"
         android:textColor="#9C27B0"
         android:textColorHint="#8BC34A"
-        app:layout_constraintEnd_toStartOf="@+id/switch1"
+        app:layout_constraintBottom_toTopOf="@+id/Permisos"
+        app:layout_constraintEnd_toStartOf="@+id/microfono"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,42 +33,69 @@
         android:layout_marginBottom="401dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_begin="330dp" />
+        app:layout_constraintGuide_begin="337dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="416dp" />
+        app:layout_constraintGuide_begin="408dp" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/microfono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="9dp"
-        android:text="Microfono"
+        android:text="@string/microfono"
         android:textAllCaps="true"
         android:textColor="#E91E63"
         android:textColorHint="#4CAF50"
         android:textColorLink="#8BC34A"
-        app:layout_constraintBottom_toTopOf="@+id/switch2"
+        app:layout_constraintBottom_toTopOf="@+id/Permisos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/Entrar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Switch
-        android:id="@+id/switch2"
+        android:id="@+id/Permisos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Permisos"
+        android:layout_marginStart="32dp"
+        android:text="@string/permisos"
         android:textAllCaps="true"
         android:textColor="#0023D4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/switch1"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+        app:layout_constraintEnd_toEndOf="@+id/microfono"
+        app:layout_constraintStart_toEndOf="@+id/Entrar"
+        app:layout_constraintTop_toBottomOf="@+id/microfono" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Atras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="?attr/actionModeCloseDrawable"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="659dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Resumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="#5D0085"
+        tools:layout_editor_absoluteX="349dp"
+        tools:layout_editor_absoluteY="659dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="125dp"
+        android:layout_height="102dp"
+        android:src="@mipmap/ic_launcher"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="204dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
